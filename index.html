@@ -27,7 +27,45 @@
 .button5:hover {
   background-color: #434c56;
   color: #ccffff;
-}</style>
+}
+.container{
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+.image {
+  opacity: 1;
+  display: block;
+  position: center;
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image{
+opacity: 0.5;
+}
+.container:hover .middle{
+  opacity: 1;
+}
+.text{
+  background-color: #434c56;
+  color: #ccffff;
+  font-size: 16px;
+  padding: auto;
+}
+
+</style>
 </head>
 
 <body>
@@ -40,9 +78,12 @@
 <h1>I'm Kevin Truong.</h1>
 
 <p>I make art digitally.</p>  
-<img src="images/Profile.gif">
-
-
+<div class="container">
+<img class="image" src="images/Profile.gif"  >
+<div class="middle">
+  <div class="text">Surpise! This isn't me but my friend.</div>
+</div>
+</div>
 
 </div>
 
